@@ -1,0 +1,3 @@
+/home/elias/Documents/git/cpp/oving01/build/CMakeFiles/edit_cache.dir
+/home/elias/Documents/git/cpp/oving01/build/CMakeFiles/rebuild_cache.dir
+/home/elias/Documents/git/cpp/oving01/build/CMakeFiles/oving01.dir
