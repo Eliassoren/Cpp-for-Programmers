@@ -1,0 +1,6 @@
+char *linje = nullptr;
+strcpy(linje,"Dette er en tekst");
+
+Man får ikke satt av plass til noe mer enn pekeren. Dermed lagres teksten der linje peker til, noe som er på plass 0. Dette er ikke nødvendigvis nok.
+I utgangspunktet burde kompilatoren fått vite hvor mange lagerplasser som trengs.
+Forsøker å kopiere tekst til adressen 0.

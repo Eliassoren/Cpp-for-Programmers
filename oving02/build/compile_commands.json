@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/elias/Documents/git/cpp/Cpp-for-Programmers/oving02/build",
+  "command": "/usr/bin/c++      -std=c++1y -Wall -Wextra -Wno-unused-parameter   -o CMakeFiles/oving02.dir/main.cpp.o -c /home/elias/Documents/git/cpp/Cpp-for-Programmers/oving02/main.cpp",
+  "file": "/home/elias/Documents/git/cpp/Cpp-for-Programmers/oving02/main.cpp"
+}
+]

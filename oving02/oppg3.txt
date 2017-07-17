@@ -1,0 +1,10 @@
+char tekst[5];
+char *pekeren = tekst;
+char letEtter = 'e';
+cin >> tekst;            // Det kan skrives inn større lengde enn det er satt av.
+while(*pekeren != letEtter){ // Loopen kan gå uendelig
+  *pekeren = letEtter;
+  pekeren++;
+
+
+// Maskinen fortsette i begge tilfeller videre i primærlageret så andre data forstyrres. Man vet ikke hva som kan skje.
