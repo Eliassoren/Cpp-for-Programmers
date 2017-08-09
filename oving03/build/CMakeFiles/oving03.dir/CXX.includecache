@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/elias/Documents/git/cpp/Cpp-for-Programmers/oving03/circle.h
+
+/home/elias/Documents/git/cpp/Cpp-for-Programmers/oving03/main.cpp
+iostream
+-
+string
+-
+circle.h
+/home/elias/Documents/git/cpp/Cpp-for-Programmers/oving03/circle.h
+ware.h
+/home/elias/Documents/git/cpp/Cpp-for-Programmers/oving03/ware.h
+
+/home/elias/Documents/git/cpp/Cpp-for-Programmers/oving03/ware.h
+string
+-
+
