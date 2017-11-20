@@ -77,7 +77,7 @@ private:
   }
 
 public:
-  EchoServer() : endpoint(tcp::v4(), 1235), acceptor(io_service, endpoint) {}
+  EchoServer() : endpoint(tcp::v4(), 8080), acceptor(io_service, endpoint) {}
 
   void start() {
     accept();
@@ -90,7 +90,7 @@ int main() {
   EchoServer echo_server;
 
   cout << "Starting echo server" << endl
-       << "Connect in a terminal with: telnet localhost 1235. Type 'exit' to end connection." << endl;
+       << "Connect in a terminal with: telnet localhost 8080. Type 'exit' to end connection." << endl;
 
   echo_server.start();
 }
