@@ -23,24 +23,13 @@ public:
     show_all(); //Show all widgets
 
     firstNameInput.signal_changed().connect([this]() {
-      if (!firstNameInput.get_text().empty()) {
-        button.set_sensitive(lastNameEntered);
-        firstNameEntered = true;
-      } else {
-        button.set_sensitive(false);
-        firstNameEntered = false;
-      }
+      firstNameEntered = !firstNameInput.get_text().empty();
+      button.set_sensitive(lastNameEntered && firstNameEntered);
     });
 
     lastNameInput.signal_changed().connect([this]() {
-      if (!lastNameInput.get_text().empty()) {
-        button.set_sensitive(firstNameEntered);
-        lastNameEntered = true;
-      } else {
-        button.set_sensitive(false);
-        lastNameEntered = false;
-      }
-
+      lastNameEntered = !lastNameInput.get_text().empty();
+      button.set_sensitive(lastNameEntered && firstNameEntered);
     });
 
     button.signal_clicked().connect([this]() {
