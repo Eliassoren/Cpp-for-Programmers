@@ -1,10 +1,18 @@
-// #include "set.h"
+// #include "set.hpp"
 // #include <set>
 // using namespace std;
+
+
+// Set::Set() {
+//   entries = {
+
+//   };
+// }
 
 // Set::Set(std::vector<int> vec) {
 //   entries = vec;
 // }
+
 
 // Set Set::operator+(Set &otherSet) const {
 //   std::set<int> unionSet;
@@ -23,22 +31,16 @@
 //   Set newSet(newEntries);
 //   return newSet;
 // }
-
 // Set Set::operator+(int &val) const {
-//   Set set();
+
+//   std::set<int> values(entries.begin(), entries.end());
+//   if (values.find(val) == values.end())
+//     values.insert(val);
+//   vector<int> newEntries(values.begin(), values.end());
+//   Set set(newEntries);
 //   return set;
 // }
 
-// Set Set::operator+=(Set &set) {
-//   Set set();
-//   return set;
-// }
-
-// Set Set::operator+=(int &val) {
-//   Set set();
-//   return set;
-// }
-// Set Set::operator=(Set set) const {
-//   Set set();
-//   return set;
+// void Set::operator=(Set &set) {
+//   entries = set.getEntries();
 // }

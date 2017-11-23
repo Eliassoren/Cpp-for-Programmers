@@ -9,11 +9,8 @@ public:
   Set();
   Set(std::vector<int> entries);
   Set operator+(Set &set) const;
-  Set operator+=(Set &set);
   Set operator+(int &val) const;
-  Set operator+=(int &val);
-  void operator=(Set set);
-  //ostream &operator<<(ostream &out, const Set &set);
+  void operator=(Set &set);
   vector<int> getEntries() { return entries; }
 
 private:
@@ -59,6 +56,6 @@ Set Set::operator+(int &val) const {
   return set;
 }
 
-void Set::operator=(Set set) {
-  entries.assign(set.getEntries().begin(), set.getEntries().end());
+void Set::operator=(Set &set) {
+  entries = set.getEntries();
 }

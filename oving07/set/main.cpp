@@ -1,7 +1,16 @@
 #include <iostream>
-#include "set.h"
+#include "set.hpp"
 #include <vector>
 using namespace std;
+
+ostream &operator<<(ostream &stream, Set &set) {
+  for (auto &val : set.getEntries()) {
+    stream << val;
+    stream << endl;
+  }
+  return stream;
+}
+
 int main() {
   std::vector<int> v;
   v.emplace_back(1);
@@ -17,15 +26,29 @@ int main() {
   w.emplace_back(6);
   w.emplace_back(9);
   w.emplace_back(20);
+  // a
+  Set empty;
   Set set(v);
   Set other(w);
-  Set unionSet = set + other;
 
+  // b
+  Set unionSet = set + other;
   for (auto &val : unionSet.getEntries()) {
     cout << "union: " << val << endl;
   }
+  //c
+  // Set add = set+1;
+
+  // d
   set = other;
   for (auto &val : set.getEntries()) {
     cout << "set =other " << val << endl;
   }
+
+  Set n = empty + set;
+  // e
+  cout << n << endl;
+
+
+  return 0;
 }
