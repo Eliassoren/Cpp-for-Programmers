@@ -9,7 +9,7 @@ void skriv(const string &tekst, const Broek &broek) {
   cout << broek.finnNevner() << endl;
 }
 void skriv(const string &tekst, const int i) {
-  cout << tekst << i << " / " << endl;
+  cout << tekst << i << endl;
 }
 
 int operator-(const int &a, const Broek &b) {
