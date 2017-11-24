@@ -17,35 +17,37 @@ private:
   vector<int> entries;
 };
 #endif
-
+// Empty set
 Set::Set() {
   entries = {
 
   };
 }
 
-Set::Set(std::vector<int> vec) {
-  entries = vec;
+Set::Set(std::vector<int> vec) : entries(vec) {
 }
 
-
+// Union of two sets
 Set Set::operator+(Set &otherSet) const {
-  std::set<int> unionSet;
+  std::set<int> unionEntries;
   for (auto &val : entries) {
-    if (unionSet.find(val) == unionSet.end()) {
-      unionSet.insert(val);
+    // Add element if search is unsuccessful. No duplicates
+    if (unionEntries.find(val) == unionEntries.end()) {
+      unionEntries.insert(val);
     }
   }
   for (auto &val : otherSet.getEntries()) {
-    // Search for element was unsuccessful
-    if (unionSet.find(val) == unionSet.end()) {
-      unionSet.insert(val);
+    // Add element if search for element was unsuccessful. No duplicates
+    if (unionEntries.find(val) == unionEntries.end()) {
+      unionEntries.insert(val);
     }
   }
-  vector<int> newEntries(unionSet.begin(), unionSet.end());
+  vector<int> newEntries(unionEntries.begin(), unionEntries.end());
   Set newSet(newEntries);
   return newSet;
 }
+
+// Add element
 Set Set::operator+(int &val) const {
 
   std::set<int> values(entries.begin(), entries.end());
@@ -55,7 +57,7 @@ Set Set::operator+(int &val) const {
   Set set(newEntries);
   return set;
 }
-
+// Assign set to other set.
 void Set::operator=(Set &set) {
   entries = set.getEntries();
 }
