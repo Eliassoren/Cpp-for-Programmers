@@ -1,13 +1,12 @@
 #include <iostream>
 #include <cmath>
-#include "math.h"
 #include <algorithm>
 using namespace std;
 
 template <class type>
 bool equals(type a, type b) {
   cout << "Type" << endl;
-  return abs(a - b) == 0;
+  return a == b;
 }
 
 bool equals(double a, double b) {
