@@ -1,6 +1,6 @@
 #include <string>
 using namespace std;
-const double tax= 0.25;
+const double tax = 0.25;
 class ware{
 public:
    ware(int id,string name, double price);
